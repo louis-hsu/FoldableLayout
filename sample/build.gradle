@@ -3,13 +3,13 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.9.+'
-        classpath 'com.alexvasilkov:android_sign:0.2'
+        classpath 'com.android.tools.build:gradle:0.12.2'
+        classpath 'com.alexvasilkov:android-sign-release:0.4'
     }
 }
 
-apply plugin: 'android'
-apply plugin: 'android_sign'
+apply plugin: 'com.android.application'
+apply plugin: 'android-sign-release'
 
 android {
     compileSdkVersion Integer.parseInt(ANDROID_COMPILE_SDK)
@@ -40,5 +40,5 @@ dependencies {
     compile project(':library')
 
     compile 'com.squareup.picasso:picasso:2.2.0'
-    compile 'com.alexvasilkov:fluffy-commons:1.0.9'
+    compile 'com.alexvasilkov:android-commons:1.2.3'
 }
